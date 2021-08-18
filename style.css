@@ -298,8 +298,11 @@ footer h4 {
 #menu-bar {
 	display: none;
 }
-header .menu-icon label {
+header label {
 	cursor: pointer;
+	display: none;
+}
+header .plus {
 	display: none;
 }
 /* /////////// */
@@ -318,10 +321,12 @@ header .menu-icon label {
 		font-size: 1.2rem;
 	}
 
-	/* ///////////////////////// */
 	/* ///////////NAV//////// */
-	header .menu-icon label,
-	header .menu-icon input {
+
+	header label {
+		display: initial;
+	}
+	header .plus {
 		display: initial;
 	}
 	header label img {
@@ -357,13 +362,6 @@ header .menu-icon label {
 	#menu-bar:checked ~ .navbar {
 		display: initial;
 	}
-	/* nav {
-		margin-right: 5px;
-	}
-	nav ul a {
-		padding: 22px 5px;
-		font-size: 0.8rem;
-	} */
 	.cart-prof {
 		margin-right: 0;
 	}
@@ -409,23 +407,6 @@ header .menu-icon label {
 		padding: 20px 5px;
 		font-size: 1rem;
 	}
-
-	/* nav {
-		position: absolute;
-		left: -100%;
-		top: 60px;
-		background: #d7e34e;
-		line-height: 0;
-		z-index: 1;
-		transition: all 0.5s;
-	}
-	nav ul li {
-		display: block;
-		padding: 20px 10px;
-	}
-	nav ul a {
-		font-size: 0.9rem;
-	} */
 	.cart-prof {
 		margin-left: auto;
 	}
@@ -521,12 +502,4 @@ header .menu-icon label {
 	.some_icons img {
 		width: 50px;
 	}
-	/* .menu_bar input,
-	.menu_bar label {
-		visibility: visible;
-		cursor: pointer;
-	} */
-	/* [id^='btn']:checked + nav {
-		left: 10px;
-	} */
 }
