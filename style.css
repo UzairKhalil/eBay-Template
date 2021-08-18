@@ -295,11 +295,13 @@ footer h4 {
 	width: 40px;
 }
 
-.menu_bar input,
-.menu_bar label {
-	visibility: hidden;
+#menu-bar {
+	display: none;
 }
-
+header .menu-icon label {
+	cursor: pointer;
+	display: none;
+}
 /* /////////// */
 
 /* ======media queries====== */
@@ -315,13 +317,53 @@ footer h4 {
 		padding: 20px 10px;
 		font-size: 1.2rem;
 	}
-	nav {
+
+	/* ///////////////////////// */
+	/* ///////////NAV//////// */
+	header .menu-icon label,
+	header .menu-icon input {
+		display: initial;
+	}
+	header label img {
+		width: 35px;
+		padding: 12px 0 0 5px;
+	}
+	header .navbar {
+		position: absolute;
+		top: 55px;
+		left: 0;
+		right: 0;
+		background: #fff;
+		border-top: 1px solid rgb(0, 0, 0, 0.1);
+		z-index: 1;
+		overflow: scroll;
+		height: 300px;
+		display: none;
+	}
+	header .navbar ul li {
+		width: 100%;
+	}
+	header .navbar ul li ul {
+		position: relative;
+		width: 100%;
+	}
+	header .navbar ul li ul li {
+		background: #eee;
+	}
+	header .navbar ul li ul li ul {
+		width: 100%;
+		left: 0;
+	}
+	#menu-bar:checked ~ .navbar {
+		display: initial;
+	}
+	/* nav {
 		margin-right: 5px;
 	}
 	nav ul a {
 		padding: 22px 5px;
 		font-size: 0.8rem;
-	}
+	} */
 	.cart-prof {
 		margin-right: 0;
 	}
@@ -361,13 +403,14 @@ footer h4 {
 	.logo {
 		width: 30px;
 		height: 30px;
-		margin: 10px 3px;
+		margin: 12px 3px 0 10px;
 	}
 	.brand {
 		padding: 20px 5px;
-		font-size: 1.1rem;
+		font-size: 1rem;
 	}
-	nav {
+
+	/* nav {
 		position: absolute;
 		left: -100%;
 		top: 60px;
@@ -382,7 +425,7 @@ footer h4 {
 	}
 	nav ul a {
 		font-size: 0.9rem;
-	}
+	} */
 	.cart-prof {
 		margin-left: auto;
 	}
@@ -483,7 +526,7 @@ footer h4 {
 		visibility: visible;
 		cursor: pointer;
 	} */
-	[id^='btn']:checked + nav {
+	/* [id^='btn']:checked + nav {
 		left: 10px;
-	}
+	} */
 }
