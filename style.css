@@ -323,37 +323,53 @@ header .plus {
 	}
 	header label img {
 		width: 35px;
-		padding: 12px 0 0 5px;
+		padding: 15px 0 0 10px;
 	}
+	/* /////////////////////STOP???????????? */
 	header .navbar {
 		position: absolute;
 		top: 55px;
-		left: 0;
-		right: 0;
-		background: #fff;
+		left: -180%;
+		/* right: 0; */
+		/* background: #fff; */
 		border-top: 1px solid rgb(0, 0, 0, 0.1);
 		z-index: 1;
-		overflow: scroll;
-		height: 300px;
-		display: none;
+		transition: all 1s;
+		/* display: none; */
 		z-index: 20;
 	}
+	header .navbar ul {
+		max-height: 60%;
+		overflow-y: scroll;
+	}
 	header .navbar ul li {
-		width: 100%;
+		background: #fff;
+		width: 60%;
+		z-index: 30;
+		margin: 0;
 	}
 	header .navbar ul li ul {
 		position: relative;
-		width: 100%;
+		/* width: 100%; */
 	}
 	header .navbar ul li ul li {
 		background: #eee;
 	}
 	header .navbar ul li ul li ul {
-		width: 100%;
+		/* width: 100%; */
 		left: 0;
+	}
+
+	header .navbar ul li:hover > ul {
+		display: none;
+	}
+	header .navbar ul li:focus-within > ul,
+	header .navbar ul li:active > ul {
+		display: initial;
 	}
 	#menu-bar:checked ~ .navbar {
 		display: initial;
+		left: 0;
 	}
 	.cart-prof {
 		margin-right: 0;
@@ -647,5 +663,4 @@ label span {
 	.me {
 		display: none;
 	}
-	/* <!-- commit --> */
 }
